@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "740099492507",
+    "firebase_url": "https://puttarajgawai.firebaseio.com",
+    "project_id": "puttarajgawai",
+    "storage_bucket": "puttarajgawai.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:740099492507:android:32d291dc782a229a",
+        "android_client_info": {
+          "package_name": "com.arkaapps.puttaraj"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "740099492507-k2ne2r25lv2adn52a2gig32pkat3o5mn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.arkaapps.puttaraj",
+            "certificate_hash": "dbf12dec5f1a8e72e91e39996e1f8be9bc792e81"
+          }
+        },
+        {
+          "client_id": "740099492507-fprtlgvq522np6k7lns7mfltaif2et0a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAI8NqNF__oKT5u8QM3D7B1fKH2lMzqkaE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "740099492507-fprtlgvq522np6k7lns7mfltaif2et0a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
