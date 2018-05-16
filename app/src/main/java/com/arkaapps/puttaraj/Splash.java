@@ -8,16 +8,26 @@ import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Looper;
 import android.support.annotation.Nullable;
 import android.support.v4.content.LocalBroadcastManager;
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.Gravity;
+import android.view.View;
+import android.widget.Button;
+import android.widget.FrameLayout;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.arkaapps.puttaraj.BaseConfig.NotiConstant;
 import com.arkaapps.puttaraj.util.NotificationUtil;
 import com.google.firebase.messaging.FirebaseMessaging;
+
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
 
 /**
  * Created by DeepakGanachari on 3/23/2018.
@@ -28,11 +38,63 @@ public class Splash extends Activity {
     private static final String TAG = NotificationFCM.class.getSimpleName();
     private BroadcastReceiver mRegistrationBroadcastReceiver;
     private TextView txtRegId, txtMessage;
+    private char mState = 0;
+    private View normal;
+    private int mCount = 1;
+    private ImageView mSplash1, mSplash2, mSplash3, mSplash4, mSplash5, mSplash6;
+    private Runnable MyRun;
+    private Handler mHandler;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.splash);
+
+        mSplash1 = findViewById(R.id.splash_anim_1);
+        mSplash2 = findViewById(R.id.splash_anim_2);
+        mSplash3 = findViewById(R.id.splash_anim_3);
+        mSplash4 = findViewById(R.id.splash_anim_4);
+        mSplash5 = findViewById(R.id.splash_anim_5);
+        mSplash6 = findViewById(R.id.splash_anim_6);
+        final ScheduledExecutorService mSchedulerThread = Executors.newScheduledThreadPool(1);
+
+        mSchedulerThread.scheduleAtFixedRate(new Runnable() {
+            @Override
+            public void run() {
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        Log.d("Count", "Count" + mCount);
+                        if (mCount == 1) {
+                            mSplash1.setVisibility(View.VISIBLE);
+                            mCount++;
+                        } else if (mCount == 2) {
+                            mSplash2.setVisibility(View.VISIBLE);
+                            mCount++;
+                        } else if (mCount == 3) {
+                            mSplash3.setVisibility(View.VISIBLE);
+                            mCount++;
+                        } else if (mCount == 4) {
+                            mSplash4.setVisibility(View.VISIBLE);
+                            mCount++;
+                        } else if (mCount == 5) {
+                            mSplash5.setVisibility(View.VISIBLE);
+                            mCount++;
+                        } else if (mCount == 6) {
+                            mSplash6.setVisibility(View.VISIBLE);
+                            mCount++;
+                        } else if (mCount == 7) {
+                            startActivity(new Intent(Splash.this, HomeScreen.class));
+                            mSchedulerThread.shutdown();
+                            finish();
+                        } else {
+
+                        }
+                    }
+                });
+            }
+        }, 0L, 1L, TimeUnit.SECONDS);
+
 
         txtRegId = (TextView) findViewById(R.id.txt_reg_id);
         txtMessage = (TextView) findViewById(R.id.txt_push_message);
@@ -63,13 +125,14 @@ public class Splash extends Activity {
 
         displayFirebaseRegId();
 
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                startActivity(new Intent(Splash.this, HomeScreen.class));
-                finish();
-            }
-        }, 3000);
+//        new Handler().postDelayed(new Runnable() {
+//            @Override
+//            public void run() {
+//
+//                startActivity(new Intent(Splash.this, HomeScreen.class));
+//                finish();
+//            }
+//        }, 3000);
     }
 
     // Fetches reg id from shared preferences
@@ -110,5 +173,4 @@ public class Splash extends Activity {
     }
 
 }
-
 
