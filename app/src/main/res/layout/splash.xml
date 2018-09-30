@@ -1,138 +1,143 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/splash_screen">
+    android:layout_height="match_parent">
 
     <FrameLayout
         android:id="@+id/framebackground"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@android:drawable/screen_background_dark_transparent"></FrameLayout>
+        android:background="@android:drawable/screen_background_dark_transparent">
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/splash_anim_1"
-        android:layout_width="70dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="454dp"
-        android:layout_marginTop="44dp"
-        android:contentDescription="@string/app_name"
-        android:src="@drawable/puttaraj_1"
-        android:visibility="invisible"
-        app:civ_border_color="@color/cardview_light_background"
-        app:civ_border_width="2dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <ImageView
+            android:id="@+id/image_puttaraj_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/splash_screen" />
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/splash_anim_2"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:layout_marginEnd="72dp"
-        android:layout_marginLeft="72dp"
-        android:layout_marginRight="72dp"
-        android:layout_marginStart="72dp"
-        android:layout_marginTop="136dp"
-        android:contentDescription="@string/app_name"
-        android:src="@drawable/puttaraj_2"
-        android:visibility="invisible"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/splash_anim_1"
-        app:layout_constraintTop_toTopOf="parent" />
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/splash_anim_1"
+            android:layout_width="70dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="44dp"
+            android:layout_marginBottom="454dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/puttaraj_1"
+            android:visibility="invisible"
+            app:civ_border_color="@color/cardview_light_background"
+            app:civ_border_width="2dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/splash_anim_3"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:layout_marginLeft="48dp"
-        android:layout_marginStart="48dp"
-        android:contentDescription="@string/app_name"
-        android:src="@drawable/puttaraj_3"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="@+id/splash_anim_2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/splash_anim_2"
-        app:layout_constraintVertical_bias="0.0" />
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/splash_anim_2"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="72dp"
+            android:layout_marginLeft="72dp"
+            android:layout_marginTop="136dp"
+            android:layout_marginEnd="72dp"
+            android:layout_marginRight="72dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/puttaraj_2"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/splash_anim_1"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/splash_anim_4"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:layout_marginBottom="213dp"
-        android:contentDescription="@string/app_name"
-        android:src="@drawable/puttaraj_4"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/splash_anim_3"
-        app:layout_constraintStart_toStartOf="@+id/splash_anim_3" />
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/splash_anim_3"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="48dp"
+            android:layout_marginLeft="48dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/puttaraj_3"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/splash_anim_2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/splash_anim_2"
+            app:layout_constraintVertical_bias="0.0" />
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/splash_anim_5"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:contentDescription="@string/app_name"
-        android:src="@drawable/puttaraj_5"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="@+id/splash_anim_4"
-        app:layout_constraintEnd_toEndOf="@+id/splash_anim_2"
-        app:layout_constraintStart_toStartOf="@+id/splash_anim_2"
-        app:layout_constraintTop_toTopOf="@+id/splash_anim_4" />
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/splash_anim_4"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginBottom="213dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/puttaraj_4"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/splash_anim_3"
+            app:layout_constraintStart_toStartOf="@+id/splash_anim_3" />
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/splash_anim_6"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:layout_marginBottom="97dp"
-        android:contentDescription="@string/app_name"
-        android:src="@drawable/puttaraj_6"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/splash_anim_5"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/puttaraj_5"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/splash_anim_4"
+            app:layout_constraintEnd_toEndOf="@+id/splash_anim_2"
+            app:layout_constraintStart_toStartOf="@+id/splash_anim_2"
+            app:layout_constraintTop_toTopOf="@+id/splash_anim_4" />
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="parent"
-        app:layout_constraintEnd_toStartOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/splash_anim_6"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginBottom="97dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/puttaraj_6"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
-        <TextView
-            android:id="@+id/txt_push_message"
+        <LinearLayout
+            android:id="@+id/linearLayout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:gravity="center_horizontal"
-            android:textColor="@color/colorPrimary"
-            android:textSize="26dp"
-            android:visibility="gone" />
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/txt_reg_id"
-            android:layout_width="wrap_content"
+            <TextView
+                android:id="@+id/txt_push_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:gravity="center_horizontal"
+                android:textColor="@color/colorPrimary"
+                android:textSize="26dp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/txt_reg_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <com.arkaapps.puttaraj.util.TypeWriter
+            android:id="@+id/splashappname"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:visibility="gone" />
-    </LinearLayout>
+            android:gravity="center"
+            android:textColor="@color/color_orange"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/splash_anim_1"
+            app:layout_constraintVertical_bias="0.961" />
 
-    <com.arkaapps.puttaraj.util.TypeWriter
-        android:id="@+id/splashappname"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:textColor="@color/color_orange"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/splash_anim_1"
-        app:layout_constraintVertical_bias="0.961" />
-
+    </FrameLayout>
 
 </android.support.constraint.ConstraintLayout>

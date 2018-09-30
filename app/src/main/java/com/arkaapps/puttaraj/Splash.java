@@ -13,7 +13,10 @@ import android.support.v4.content.LocalBroadcastManager;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -45,6 +48,8 @@ public class Splash extends Activity {
     private Handler mHandler;
     private TypeWriter mTvHeading;
     private FrameLayout mFrameLayout;
+    private ImageView mImagePuttarajBg;
+    private Animation animSlide;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -52,8 +57,12 @@ public class Splash extends Activity {
         setContentView(R.layout.splash);
         mFrameLayout = (FrameLayout) findViewById(R.id.framebackground);
         mTvHeading = (TypeWriter) findViewById(R.id.splashappname);
+        mImagePuttarajBg=(ImageView) findViewById(R.id.image_puttaraj_bg);
         mTvHeading.setCharacterDelay(150);
         mTvHeading.animateText("Dr.ಗಾನಯೋಗಿ ಪುಟ್ಟರಾಜ ಗವಾಯಿ");
+        animSlide = AnimationUtils.loadAnimation(getApplicationContext(),
+                R.anim.fade_in);
+        mImagePuttarajBg.startAnimation(animSlide);
 
         mSplash1 = (CircleImageView) findViewById(R.id.splash_anim_1);
         mSplash2 = (CircleImageView) findViewById(R.id.splash_anim_2);
