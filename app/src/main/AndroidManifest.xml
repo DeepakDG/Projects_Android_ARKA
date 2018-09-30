@@ -17,7 +17,7 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyDA39VcdQMCrySlnDabGIUp2VpG08OarTk" />
 
-        <activity android:name=".Splash">
+        <activity android:name="com.arkaapps.puttaraj.Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

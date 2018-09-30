@@ -13,11 +13,13 @@ import android.support.v4.content.LocalBroadcastManager;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
+import android.widget.FrameLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.arkaapps.puttaraj.BaseConfig.NotiConstant;
 import com.arkaapps.puttaraj.util.NotificationUtil;
+import com.arkaapps.puttaraj.util.TypeWriter;
 import com.google.firebase.messaging.FirebaseMessaging;
 
 import java.util.concurrent.Executors;
@@ -41,11 +43,17 @@ public class Splash extends Activity {
     private CircleImageView mSplash1, mSplash2, mSplash3, mSplash4, mSplash5, mSplash6;
     private Runnable MyRun;
     private Handler mHandler;
+    private TypeWriter mTvHeading;
+    private FrameLayout mFrameLayout;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.splash);
+        mFrameLayout = (FrameLayout) findViewById(R.id.framebackground);
+        mTvHeading = (TypeWriter) findViewById(R.id.splashappname);
+        mTvHeading.setCharacterDelay(150);
+        mTvHeading.animateText("Dr.ಗಾನಯೋಗಿ ಪುಟ್ಟರಾಜ ಗವಾಯಿ");
 
         mSplash1 = (CircleImageView) findViewById(R.id.splash_anim_1);
         mSplash2 = (CircleImageView) findViewById(R.id.splash_anim_2);
@@ -79,6 +87,7 @@ public class Splash extends Activity {
                             mCount++;
                         } else if (mCount == 6) {
                             mSplash6.setVisibility(View.VISIBLE);
+                            mFrameLayout.setVisibility(View.GONE);
                             mCount++;
                         } else if (mCount == 7) {
                             startActivity(new Intent(Splash.this, HomeScreen.class));
