@@ -12,11 +12,11 @@
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/image_puttaraj_bg"
-        android:layout_width="210dp"
-        android:layout_height="210dp"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
         android:src="@drawable/splash_screen"
         android:contentDescription="@string/app_name"
-        app:civ_border_color="@color/cardview_light_background"
+        app:civ_border_color="@color/violet"
         app:civ_border_width="10dp"/>
 
     <!--<de.hdodenhof.circleimageview.CircleImageView-->

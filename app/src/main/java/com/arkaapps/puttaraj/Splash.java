@@ -50,7 +50,7 @@ public class Splash extends Activity {
         mTvHeading = (TypeWriter) findViewById(R.id.splashappname);
         mImagePuttarajBg=(ImageView) findViewById(R.id.image_puttaraj_bg);
         mTvHeading.setCharacterDelay(150);
-        mTvHeading.animateText("Dr.ಗಾನಯೋಗಿ ಪುಟ್ಟರಾಜ ಗವಾಯಿ");
+        mTvHeading.animateText("ಡಾ.ಗಾನಯೋಗಿ ಪುಟ್ಟರಾಜ ಗವಾಯಿ");
         animSlide = AnimationUtils.loadAnimation(getApplicationContext(),
                 R.anim.fade_in);
         mImagePuttarajBg.startAnimation(animSlide);
@@ -131,14 +131,14 @@ public class Splash extends Activity {
 
         displayFirebaseRegId();
 
-//        new Handler().postDelayed(new Runnable() {
-//            @Override
-//            public void run() {
-//
-//                startActivity(new Intent(Splash.this, HomeScreen.class));
-//                finish();
-//            }
-//        }, 3000);
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+
+                startActivity(new Intent(Splash.this, HomeScreen.class));
+                finish();
+            }
+        }, 3000);
     }
 
     // Fetches reg id from shared preferences
