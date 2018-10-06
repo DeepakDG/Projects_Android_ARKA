@@ -15,7 +15,6 @@ import android.util.Log;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -24,12 +23,6 @@ import com.arkaapps.puttaraj.BaseConfig.NotiConstant;
 import com.arkaapps.puttaraj.util.NotificationUtil;
 import com.arkaapps.puttaraj.util.TypeWriter;
 import com.google.firebase.messaging.FirebaseMessaging;
-
-import java.util.concurrent.Executors;
-import java.util.concurrent.ScheduledExecutorService;
-import java.util.concurrent.TimeUnit;
-
-import de.hdodenhof.circleimageview.CircleImageView;
 
 /**
  * Created by DeepakGanachari on 3/23/2018.
@@ -43,11 +36,10 @@ public class Splash extends Activity {
     private char mState = 0;
     private View normal;
     private int mCount = 1;
-    private CircleImageView mSplash1, mSplash2, mSplash3, mSplash4, mSplash5, mSplash6;
+//    private CircleImageView mSplash1, mSplash2, mSplash3, mSplash4, mSplash5, mSplash6;
     private Runnable MyRun;
     private Handler mHandler;
     private TypeWriter mTvHeading;
-    private FrameLayout mFrameLayout;
     private ImageView mImagePuttarajBg;
     private Animation animSlide;
 
@@ -55,7 +47,6 @@ public class Splash extends Activity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.splash);
-        mFrameLayout = (FrameLayout) findViewById(R.id.framebackground);
         mTvHeading = (TypeWriter) findViewById(R.id.splashappname);
         mImagePuttarajBg=(ImageView) findViewById(R.id.image_puttaraj_bg);
         mTvHeading.setCharacterDelay(150);
@@ -64,51 +55,51 @@ public class Splash extends Activity {
                 R.anim.fade_in);
         mImagePuttarajBg.startAnimation(animSlide);
 
-        mSplash1 = (CircleImageView) findViewById(R.id.splash_anim_1);
-        mSplash2 = (CircleImageView) findViewById(R.id.splash_anim_2);
-        mSplash3 = (CircleImageView) findViewById(R.id.splash_anim_3);
-        mSplash4 = (CircleImageView) findViewById(R.id.splash_anim_4);
-        mSplash5 = (CircleImageView) findViewById(R.id.splash_anim_5);
-        mSplash6 = (CircleImageView) findViewById(R.id.splash_anim_6);
-        final ScheduledExecutorService mSchedulerThread = Executors.newScheduledThreadPool(1);
-
-        mSchedulerThread.scheduleAtFixedRate(new Runnable() {
-            @Override
-            public void run() {
-                runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-                        Log.d("Count", "Count" + mCount);
-                        if (mCount == 1) {
-                            mSplash1.setVisibility(View.VISIBLE);
-                            mCount++;
-                        } else if (mCount == 2) {
-                            mSplash2.setVisibility(View.VISIBLE);
-                            mCount++;
-                        } else if (mCount == 3) {
-                            mSplash3.setVisibility(View.VISIBLE);
-                            mCount++;
-                        } else if (mCount == 4) {
-                            mSplash4.setVisibility(View.VISIBLE);
-                            mCount++;
-                        } else if (mCount == 5) {
-                            mSplash5.setVisibility(View.VISIBLE);
-                            mCount++;
-                        } else if (mCount == 6) {
-                            mSplash6.setVisibility(View.VISIBLE);
-                            mFrameLayout.setVisibility(View.GONE);
-                            mCount++;
-                        } else if (mCount == 7) {
-                            startActivity(new Intent(Splash.this, HomeScreen.class));
-                            mSchedulerThread.shutdown();
-                            finish();
-                        } else {
-
-                        }
-                    }
-                });
-            }
-        }, 0L, 1L, TimeUnit.SECONDS);
+//        mSplash1 = (CircleImageView) findViewById(R.id.splash_anim_1);
+//        mSplash2 = (CircleImageView) findViewById(R.id.splash_anim_2);
+//        mSplash3 = (CircleImageView) findViewById(R.id.splash_anim_3);
+//        mSplash4 = (CircleImageView) findViewById(R.id.splash_anim_4);
+//        mSplash5 = (CircleImageView) findViewById(R.id.splash_anim_5);
+//        mSplash6 = (CircleImageView) findViewById(R.id.splash_anim_6);
+//        final ScheduledExecutorService mSchedulerThread = Executors.newScheduledThreadPool(1);
+//
+//        mSchedulerThread.scheduleAtFixedRate(new Runnable() {
+//            @Override
+//            public void run() {
+//                runOnUiThread(new Runnable() {
+//                    @Override
+//                    public void run() {
+//                        Log.d("Count", "Count" + mCount);
+//                        if (mCount == 1) {
+//                            mSplash1.setVisibility(View.VISIBLE);
+//                            mCount++;
+//                        } else if (mCount == 2) {
+//                            mSplash2.setVisibility(View.VISIBLE);
+//                            mCount++;
+//                        } else if (mCount == 3) {
+//                            mSplash3.setVisibility(View.VISIBLE);
+//                            mCount++;
+//                        } else if (mCount == 4) {
+//                            mSplash4.setVisibility(View.VISIBLE);
+//                            mCount++;
+//                        } else if (mCount == 5) {
+//                            mSplash5.setVisibility(View.VISIBLE);
+//                            mCount++;
+//                        } else if (mCount == 6) {
+//                            mSplash6.setVisibility(View.VISIBLE);
+//                            mFrameLayout.setVisibility(View.GONE);
+//                            mCount++;
+//                        } else if (mCount == 7) {
+//                            startActivity(new Intent(Splash.this, HomeScreen.class));
+//                            mSchedulerThread.shutdown();
+//                            finish();
+//                        } else {
+//
+//                        }
+//                    }
+//                });
+//            }
+//        }, 0L, 1L, TimeUnit.SECONDS);
 
 
         txtRegId = (TextView) findViewById(R.id.txt_reg_id);
