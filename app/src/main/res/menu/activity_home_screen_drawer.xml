@@ -19,7 +19,7 @@
         <item
             android:id="@+id/nav_manage"
             android:icon="@drawable/ic_menu_manage"
-            android:title="Tools" />
+            android:title="ಪ್ರಶಸ್ತಿಗಳು ಮತ್ತು ಮನ್ನಣೆಗಳು" />
     </group>
 
     <item android:title="Communicate">
@@ -31,7 +31,7 @@
             <item
                 android:id="@+id/nav_send"
                 android:icon="@drawable/ic_menu_send"
-                android:title="ಪ್ರಶಸ್ತಿಗಳು ಮತ್ತು ಮನ್ನಣೆಗಳು" />
+                android:title="ಶೆರ್ ಮಾಡಿ" />
         </menu>
     </item>
 

@@ -17,6 +17,7 @@ import android.view.MenuItem;
 import android.view.View;
 
 import com.arkaapps.puttaraj.Fragment.DashboardListFragment;
+import com.arkaapps.puttaraj.SettingPreference.SettingsActivity;
 
 public class HomeScreen extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -81,7 +82,8 @@ public class HomeScreen extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
-            return true;
+            Intent stepperIntent=new Intent(HomeScreen.this,SettingsActivity.class);
+            startActivity(stepperIntent);
         }
 
         return super.onOptionsItemSelected(item);
