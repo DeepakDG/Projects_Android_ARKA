@@ -36,7 +36,6 @@ public class Splash extends Activity {
     private char mState = 0;
     private View normal;
     private int mCount = 1;
-//    private CircleImageView mSplash1, mSplash2, mSplash3, mSplash4, mSplash5, mSplash6;
     private Runnable MyRun;
     private Handler mHandler;
     private TypeWriter mTvHeading;
@@ -55,55 +54,8 @@ public class Splash extends Activity {
                 R.anim.fade_in);
         mImagePuttarajBg.startAnimation(animSlide);
 
-//        mSplash1 = (CircleImageView) findViewById(R.id.splash_anim_1);
-//        mSplash2 = (CircleImageView) findViewById(R.id.splash_anim_2);
-//        mSplash3 = (CircleImageView) findViewById(R.id.splash_anim_3);
-//        mSplash4 = (CircleImageView) findViewById(R.id.splash_anim_4);
-//        mSplash5 = (CircleImageView) findViewById(R.id.splash_anim_5);
-//        mSplash6 = (CircleImageView) findViewById(R.id.splash_anim_6);
-//        final ScheduledExecutorService mSchedulerThread = Executors.newScheduledThreadPool(1);
-//
-//        mSchedulerThread.scheduleAtFixedRate(new Runnable() {
-//            @Override
-//            public void run() {
-//                runOnUiThread(new Runnable() {
-//                    @Override
-//                    public void run() {
-//                        Log.d("Count", "Count" + mCount);
-//                        if (mCount == 1) {
-//                            mSplash1.setVisibility(View.VISIBLE);
-//                            mCount++;
-//                        } else if (mCount == 2) {
-//                            mSplash2.setVisibility(View.VISIBLE);
-//                            mCount++;
-//                        } else if (mCount == 3) {
-//                            mSplash3.setVisibility(View.VISIBLE);
-//                            mCount++;
-//                        } else if (mCount == 4) {
-//                            mSplash4.setVisibility(View.VISIBLE);
-//                            mCount++;
-//                        } else if (mCount == 5) {
-//                            mSplash5.setVisibility(View.VISIBLE);
-//                            mCount++;
-//                        } else if (mCount == 6) {
-//                            mSplash6.setVisibility(View.VISIBLE);
-//                            mFrameLayout.setVisibility(View.GONE);
-//                            mCount++;
-//                        } else if (mCount == 7) {
-//                            startActivity(new Intent(Splash.this, HomeScreen.class));
-//                            mSchedulerThread.shutdown();
-//                            finish();
-//                        } else {
-//
-//                        }
-//                    }
-//                });
-//            }
-//        }, 0L, 1L, TimeUnit.SECONDS);
-
-
-        txtRegId = (TextView) findViewById(R.id.txt_reg_id);
-        txtMessage = (TextView) findViewById(R.id.txt_push_message);
+        txtRegId = findViewById(R.id.txt_reg_id);
+        txtMessage =findViewById(R.id.txt_push_message);
 
         mRegistrationBroadcastReceiver = new BroadcastReceiver() {
             @Override
@@ -138,7 +90,7 @@ public class Splash extends Activity {
                 startActivity(new Intent(Splash.this, HomeScreen.class));
                 finish();
             }
-        }, 3000);
+        }, 3500);
     }
 
     // Fetches reg id from shared preferences

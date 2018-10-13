@@ -1,4 +1,4 @@
-package com.hirecraft.jugunoo.passenger.utility;
+package com.arkaapps.puttaraj.util;
 
 import android.content.Context;
 import android.content.SharedPreferences;
