@@ -90,7 +90,7 @@ public class Splash extends Activity {
                 startActivity(new Intent(Splash.this, HomeScreen.class));
                 finish();
             }
-        }, 3500);
+        }, 5000);
     }
 
     // Fetches reg id from shared preferences

@@ -15,7 +15,7 @@ public class ArticleStepperFragment2 extends Fragment implements Step {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.article_stepper, container, false);
+        View v = inflater.inflate(R.layout.fragmentbio2, container, false);
 
         //initialize your UI
 

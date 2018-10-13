@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="ಬೆಳಗ್ಗೆ ನಾಲ್ಕು ಗಂಟೆಗೆ ಎದ್ದು ನಿತ್ಯಕರ್ಮ ಹಾಗೂ ಯೋಗದ ಅನಂತರ ಬಾವಿ ನೀರಿನ ಮಜ್ಜನದೊಂದಿಗೆ ಮಡಿಯಾಗಿ ಪೂಜಾ ಕೋಣೆ ಸೇರಿದರೆ ಸಾಕು ಹೊರಗಿನ ಜಗತ್ತನ್ನೆ ಮರೆಯುತ್ತಿದ್ದರು. ಪೂಜಾ ಕೋಣೆಯಲ್ಲಿ ತ್ರಿಕಾಲ ನಿಷ್ಠರಾಗಿ ನಾಲ್ಕೈದು ಗಂಟೆಗಳವರೆಗೆ ಆರಾಧ್ಯದೈವದಲ್ಲಿ ತನ್ಮಯರಾಗಿ ಪುಟ್ಟರಾಜರು ಕೈಗೊಳ್ಳುತ್ತಿದ್ದ ಇಷ್ಟಲಿಂಗ ಅರ್ಚನೆ. ಇಷ್ಟಲಿಂಗ ಪೂಜೆಯನ್ನು ದಿನದಲ್ಲಿ ಎರಡು ಬಾರಿ ಮಾಡುತ್ತಿದ್ದರು.ಪುಟ್ಟರಾಜರು ಇಷ್ಟಲಿಂಗ ಪೂಜೆ ವಿಷಯದಲ್ಲಿಯೂ ಅಷ್ಟೇ ಖ್ಯಾತರಾಗಿದ್ದರು. ಮಕ್ಕಳಿಗೆ ಪಾಠ , ಇತರರಿಗೆ ಹೇಳಿ ಪುರಾಣ, ಪೌರಾಣಿಕ ನಾಟಕಗಳನ್ನು ಉಕ್ತ ಲೇಖನವಾಗಿಸಲು ಮಾರ್ಗದರ್ಶನ. ಆಶ್ರಮಕ್ಕೆ ಬಂದ ಭಕ್ತಾದಿಗಳ ಕುಶಲೋಪರಿ ವಿಚಾರಣೆ. ಆಶ್ರಮದ ಮಕ್ಕಳ ಆಟ-ಊಟ-ಉಪಚಾರ ಹಾಗೂ ಅನಾರೋಗ್ಯ ಕಾಡಿದರೆ ಮಕ್ಕಳ ದೇಖ್ ರೇಖ್."/>
+
+</android.support.constraint.ConstraintLayout>

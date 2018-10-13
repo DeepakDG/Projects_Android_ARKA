@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
-    <PreferenceCategory android:title="General">
+    <PreferenceCategory android:title="App General Setting">
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="@string/key_language"
+            android:summary="@string/change_language"
+            android:title="@string/title_language" />
+
         <EditTextPreference
             android:defaultValue="@string/default_gallery_storage"
             android:key="@string/key_gallery_name"
@@ -39,11 +46,6 @@
             android:summary="@string/summary_choose_ringtone"
             android:title="@string/pref_title_ringtone" />
 
-        <SwitchPreference
-            android:defaultValue="true"
-            android:key="@string/key_vibrate"
-            android:summary="@string/summary_vibrate"
-            android:title="@string/title_vibrate" />
     </PreferenceCategory>
 
     <PreferenceCategory android:title="@string/pref_header_about">

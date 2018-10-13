@@ -28,14 +28,14 @@
     <string name="choose_email_client">Choose email client</string>
     <string name="title_gallery_storage">Default Storage</string>
     <string name="title_new_notification_sound">New message notification</string>
-    <string name="title_vibrate">Vibrate</string>
-    <string name="summary_vibrate">Vibrate on new notification</string>
+    <string name="title_language">Language</string>
+    <string name="change_language">Change Your Language</string>
     <string name="key_upload_over_wifi">key_upload_over_wifi</string>
     <string name="key_gallery_name">key_gallery_name</string>
     <string name="key_upload_quality">key_upload_quality</string>
     <string name="notifications_new_message">notifications_new_message</string>
     <string name="key_notifications_new_message_ringtone">key_notifications_new_message_ringtone</string>
-    <string name="key_vibrate">key_vibrate</string>
+    <string name="key_language">key_Language</string>
 
     <!-- Strings related to Settings -->
 
